@@ -7,7 +7,7 @@
         <!--Interlock View Controller-->
         <scene sceneID="crr-ox-NMu">
             <objects>
-                <viewController id="1xH-g6-Etw" customClass="REXInterlockViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="REXInterlockViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1xH-g6-Etw" customClass="REXInterlockViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mv5-MV-X9q"/>
                         <viewControllerLayoutGuide type="bottom" id="dHV-dk-Rsl"/>

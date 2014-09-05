@@ -34,6 +34,20 @@
     [sliderBTerminal subscribe:sliderATerminal];
 }
 
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super encodeRestorableStateWithCoder:coder];
+
+    [coder encodeFloat:self.interlockA.value forKey:@"interlockedPosition"];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+
+    float position = [coder decodeFloatForKey:@"interlockedPosition"];
+    self.interlockA.value = position;
+    self.interlockB.value = position;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
